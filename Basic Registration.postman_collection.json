@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f8ef2dad-04a9-4728-af3f-e259dd7b0f6e",
-		"name": "Django_Portal_API",
+		"_postman_id": "031baaa3-8c72-4f51-993d-c0540a9ed2ee",
+		"name": "Basic Registration",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "22785968"
 	},
@@ -45,12 +45,12 @@
 					"query": [
 						{
 							"key": "",
-							"value": null,
+							"value": "",
 							"disabled": true
 						},
 						{
 							"key": "",
-							"value": null,
+							"value": "",
 							"disabled": true
 						}
 					]
@@ -105,9 +105,48 @@
 		},
 		{
 			"name": "User Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2NjgxODIzLCJpYXQiOjE2NjY2ODA2MjMsImp0aSI6IjdkOTM3Mjc0ZjI5NTRkYTViY2VjZGExN2ExMTFkNGZiIiwidXNlcl9pZCI6MTB9.VQBMQc8Qx0dgoIrlpOmT1IC9UVABJ-1t1RlmqYw2Xew",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"profile",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -115,7 +154,24 @@
 			"name": "Change User Password",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/changepassword/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"changepassword",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -123,7 +179,24 @@
 			"name": "Send Reset Password Email",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/send-reset-password-email/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"send-reset-password-email",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -131,7 +204,26 @@
 			"name": "Reset User Password",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/reset-password/<uid>/<token>/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"reset-password",
+						"<uid>",
+						"<token>",
+						""
+					]
+				}
 			},
 			"response": []
 		}
